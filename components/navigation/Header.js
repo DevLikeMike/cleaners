@@ -8,11 +8,12 @@ import styled from "styled-components";
 const Navbar = styled.nav`
   width: 100vw;
   height: 3rem;
+  position: fixed;
+  top: 0;
   display: flex;
   justify-content: flex-end;
   background-color: #fff;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
-
   @media (min-width: 768px) {
     justify-content: center;
   }

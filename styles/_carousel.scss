@@ -1,0 +1,53 @@
+.item {
+  min-height: 50vh;
+  width: 100%;
+  background-color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-y: hidden;
+  position: relative;
+  cursor: pointer;
+
+  img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    vertical-align: bottom;
+    object-fit: cover;
+    z-index: 0;
+  }
+
+  &__heading {
+    position: relative;
+    z-index: 2;
+    background-color: rgba(118, 116, 116, 0.5);
+    height: 50vh;
+    width: 100%;
+    color: rgba(255, 255, 255, 1);
+
+    h2 {
+      margin-bottom: 2rem;
+    }
+
+    h2,
+    h3 {
+      text-align: center;
+    }
+
+    @include sm-mobile {
+      height: 20vh;
+    }
+  }
+}
+
+.item__heading::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #000;
+  opacity: 0.8;
+  z-index: 1;
+}
